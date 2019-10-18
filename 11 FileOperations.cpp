@@ -30,7 +30,7 @@ int main ()
         exit(1);
     }
     cout<< "Writing to the file" <<endl;
-    cout<< "Enter contents for file end with ctrl+D";
+    cout<< "Enter contents for file end with "^D";
     string data;
     while(getline(cin,data))
     {
