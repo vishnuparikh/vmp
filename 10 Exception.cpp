@@ -42,33 +42,26 @@ int main()
         try
         {
             if(a[i].age<18||a[i].age>55)
-                throw a[i].age;
+                throw '1';
             else if(a[i].income<50000||a[i].income>100000)
-                throw (float)a[i].income;
+                throw '2';
             else if(!(a[i].city=="Pune"||a[i].city=="Mumbai"||a[i].city=="Bangalore"||a[i].city=="Chennai"))
-                throw 0;
+                throw '3';
             else if(a[i].car!='Y')
-                throw 'c';
+                throw '4';
             else
                 cout<<"\nThe Applicant is cleared for loan application.";
         }
         catch(char m)
         {
+            if(m=='1')
             cout<<"\nThe Applicant does not satisfy Vehicle criteria";
-        }
-        catch(int b)
-        {
-            if(b==0)
+            else if(m=='2')
                 cout<<"\nThe Applicant does not satisfy the residence criteria.";
-        }
-        catch(float n)
-        {
-            cout<<"\nThe Applicant does not satisfy income criteria.";
-        }
-        catch(int a)
-        {
-            if(a!=0)
-                cout<<"\nThe Applicant does not satisfy age criteria.";
+            else if(m=='3')
+                cout<<"\nThe Applicant does not satisfy income criteria.";
+            else if(m=='4')
+                cout<<"\nThe Applicant does not satisfy age criteria.";       
         }
     }
     return 0;
